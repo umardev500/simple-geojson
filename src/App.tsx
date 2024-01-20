@@ -31,7 +31,7 @@ function App() {
     const vectorLayer = new VectorLayer({
       source: source,
       style: {
-        'fill-color': 'rgba(251, 146, 60, 0.2)',
+        'fill-color': 'rgba(251, 146, 60, 0.4)',
         'stroke-width': 1,
         'stroke-color': '#fb923c',
         'circle-radius': 5,
@@ -42,11 +42,6 @@ function App() {
     });
     
 
-    const place = [117, -2];
-    new View({
-      center: place,
-      zoom: 6,
-    });
 
     // Check if the map is already initialized
     if (!mapRef.current) {
