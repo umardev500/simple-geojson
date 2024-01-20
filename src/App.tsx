@@ -31,7 +31,7 @@ function App() {
     const vectorLayer = new VectorLayer({
       source: source,
       style: {
-        'fill-color': 'transparent',
+        'fill-color': 'rgba(251, 146, 60, 0.2)',
         'stroke-width': 1,
         'stroke-color': '#fb923c',
         'circle-radius': 5,
