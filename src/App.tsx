@@ -1,9 +1,10 @@
-import Map from 'ol/Map.js';
+import Maper from 'ol/Map.js';
 import View from 'ol/View.js';
 import GeoJSON from 'ol/format/GeoJSON.js';
 import TileLayer from 'ol/layer/Tile.js';
 import VectorLayer from 'ol/layer/Vector';
 import "ol/ol.css";
+// import Map from 'ol/Map';
 import OSM from 'ol/source/OSM.js';
 import VectorSource from 'ol/source/Vector';
 import { useEffect, useRef, useState } from 'react';
@@ -16,7 +17,8 @@ function App() {
     'https://raw.githubusercontent.com/yusufsyaifudin/wilayah-indonesia/master/data/geojson/province/74.geojson'
   ]
   const [region, setRegion] = useState(data[1]);
-  const mapRef = useRef(null);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const mapRef = useRef<any>(null);
 
   useGeographic()
   
@@ -41,7 +43,7 @@ function App() {
     
 
     const place = [117, -2];
-    const view = new View({
+    new View({
       center: place,
       zoom: 6,
     });
@@ -54,7 +56,7 @@ function App() {
         zoom: 6,
       });
 
-      const map = new Map({
+      const map = new Maper({
         layers: [
           new TileLayer({
             source: new OSM({
